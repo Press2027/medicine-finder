@@ -1,0 +1,44 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pharmacy Medicine Finder</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">💊 Pharmacy Medicine Finder</div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="pharmacies.html">Pharmacies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <footer>
+    <p>WDD 330 Class Project</p>
+    <p>Preston Machanga</p>
+    <p>&copy; <span id="year"></span> Pharmacy Medicine Finder</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+
+</body>
+</html>
