@@ -3,16 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Favorite Medicines - Pharmacy Medicine Finder</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Favorites | Pharmacy Medicine Finder</title>
 
   <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header>
 
     <div class="header-content">
@@ -23,23 +30,28 @@
 
       <nav>
         <ul>
+
           <li>
-            <a href="index.html">
+            <a href="./index.html">
               Home
             </a>
           </li>
 
           <li>
-            <a href="favorites.html" class="active">
+            <a
+              href="./favorites.html"
+              class="active"
+            >
               Favorites
             </a>
           </li>
 
           <li>
-            <a href="pharmacies.html">
+            <a href="./pharmacies.html">
               Pharmacies
             </a>
           </li>
+
         </ul>
       </nav>
 
@@ -48,8 +60,11 @@
   </header>
 
 
-  <!-- MAIN CONTENT -->
-  <main class="favorites-main">
+  <!-- =========================
+       MAIN
+  ========================== -->
+
+  <main>
 
     <section class="favorites-section">
 
@@ -70,6 +85,7 @@
 
         </div>
 
+
         <button
           id="clearFavorites"
           class="clear-btn"
@@ -80,6 +96,8 @@
 
       </div>
 
+
+      <!-- FAVORITES LIST -->
 
       <div id="favoritesList">
 
@@ -94,7 +112,7 @@
           </p>
 
           <a
-            href="index.html"
+            href="./index.html"
             class="home-btn"
           >
             ← Go back to search medicines
@@ -109,7 +127,10 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
 
     <p>
@@ -134,7 +155,27 @@
   </footer>
 
 
-  <script type="module" src="/src/favorites.js"></script>
+  <!-- =========================
+       FOOTER SCRIPT
+  ========================== -->
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("lastModified").textContent =
+      document.lastModified;
+  </script>
+
+
+  <!-- =========================
+       FAVORITES JAVASCRIPT
+  ========================== -->
+
+  <script
+    type="module"
+    src="./src/favorites.js">
+  </script>
 
 </body>
 

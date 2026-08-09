@@ -3,100 +3,194 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pharmacies | Medicine Finder</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
     content="Find nearby pharmacies using the Medicine Finder application."
   >
 
+  <title>Nearby Pharmacies | Pharmacy Medicine Finder</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIINfQ3m2X3qYxK5vX7F9K5N9M5Q5Q5Q5Q="
+    crossorigin=""
+  >
+
+  <!-- Main CSS -->
+  
   <link rel="stylesheet" href="/src/style.css">
   <link rel="stylesheet" href="/src/responsive.css">
   <link rel="stylesheet" href="/src/animations.css">
 </head>
+</head>
 
 <body>
 
-  <!-- Navigation -->
-  <header class="site-header">
-    <nav class="navbar">
-      <div class="logo">💊 Pharmacy Medicine Finder</div>
-        <a href="./index.html">Medicine Finder</a>
-      </div>
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-      <ul class="nav-links">
-        <li>
-          <a href="./index.html">Home</a>
-        </li>
+  <header>
 
-        <li>
-          <a href="./favorites.html">Favorites</a>
-        </li>
+    <div class="header-content">
 
-        <li>
-          <a
-            href="./pharmacies.html"
-            class="active"
-            aria-current="page"
-          >
-            Pharmacies
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <h1 class="site-title">
+        💊 Pharmacy Medicine Finder
+      </h1>
+
+      <nav>
+        <ul class="nav-links">
+
+          <li>
+            <a href="./index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="./favorites.html">
+              Favorites
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="./pharmacies.html"
+              class="active"
+              aria-current="page"
+            >
+              Pharmacies
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+
   </header>
 
-  <!-- Main Content -->
-  <main class="pharmacy-page">
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+
+  <main>
+
+    <!-- Page Heading -->
 
     <section class="page-heading">
-      <h1>Find Nearby Pharmacies</h1>
+
+      <h1>
+        Find Nearby Pharmacies
+      </h1>
 
       <p>
         Find pharmacies near your current location.
       </p>
+
     </section>
+
 
     <!-- Map -->
+
     <section class="map-section">
-      <div id="map" aria-label="Map showing nearby pharmacies"></div>
+
+      <div
+        id="map"
+        aria-label="Map showing nearby pharmacies"
+      ></div>
+
     </section>
 
+
     <!-- Pharmacy Results -->
+
     <section class="pharmacy-results">
 
-      <h2>Nearby Pharmacies</h2>
+      <h2>
+        Nearby Pharmacies
+      </h2>
 
       <div
         id="pharmacyList"
         class="pharmacy-grid"
       >
+
         <p class="loading-message">
           Loading pharmacies...
         </p>
+
       </div>
 
     </section>
 
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
-    <p>WDD 330 Class Project</p>
-    <p>Preston Machanga</p>
-    <p>&copy; <span id="year"></span> Pharmacy Medicine Finder</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+
+    <p>
+      WDD 330 Class Project
+    </p>
+
+    <p>
+      Preston Machanga
+    </p>
+
+    <p>
+      &copy;
+      <span id="year"></span>
+      Pharmacy Medicine Finder
+    </p>
+
+    <p>
+      Last Modified:
+      <span id="lastModified"></span>
+    </p>
+
   </footer>
+
+
+  <!-- =========================
+       FOOTER INFORMATION
+  ========================== -->
+
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = document.lastModified;
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("lastModified").textContent =
+      document.lastModified;
   </script>
 
+
+  <!-- Leaflet JavaScript -->
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+  </script>
+
+
   <!-- Pharmacy JavaScript -->
+
   <script
     type="module"
-    src="/src/pharmacy.js">
+    src="./src/pharmacy.js">
   </script>
 
 </body>
