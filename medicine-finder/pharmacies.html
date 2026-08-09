@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pharmacies | Medicine Finder</title>
+
+  <meta
+    name="description"
+    content="Find nearby pharmacies using the Medicine Finder application."
+  >
+
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/src/responsive.css">
+  <link rel="stylesheet" href="/src/animations.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">💊 Pharmacy Medicine Finder</div>
+        <a href="./index.html">Medicine Finder</a>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="./favorites.html">Favorites</a>
+        </li>
+
+        <li>
+          <a
+            href="./pharmacies.html"
+            class="active"
+            aria-current="page"
+          >
+            Pharmacies
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pharmacy-page">
+
+    <section class="page-heading">
+      <h1>Find Nearby Pharmacies</h1>
+
+      <p>
+        Find pharmacies near your current location.
+      </p>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section">
+      <div id="map" aria-label="Map showing nearby pharmacies"></div>
+    </section>
+
+    <!-- Pharmacy Results -->
+    <section class="pharmacy-results">
+
+      <h2>Nearby Pharmacies</h2>
+
+      <div
+        id="pharmacyList"
+        class="pharmacy-grid"
+      >
+        <p class="loading-message">
+          Loading pharmacies...
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>WDD 330 Class Project</p>
+    <p>Preston Machanga</p>
+    <p>&copy; <span id="year"></span> Pharmacy Medicine Finder</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+
+  <!-- Pharmacy JavaScript -->
+  <script
+    type="module"
+    src="/src/pharmacy.js">
+  </script>
+
+</body>
+
+</html>

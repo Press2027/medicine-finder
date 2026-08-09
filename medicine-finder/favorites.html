@@ -1,51 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+  <title>Favorite Medicines - Pharmacy Medicine Finder</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Favorites</title>
-
-<link rel="stylesheet" href="css/styles.css">
-
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body>
 
-<header>
+  <!-- HEADER -->
+  <header>
 
-<div class="logo">
+    <div class="header-content">
 
-💊 Pharmacy Medicine Finder
+      <h1 class="site-title">
+        💊 Pharmacy Medicine Finder
+      </h1>
 
-</div>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
 
-<nav>
+          <li>
+            <a href="favorites.html" class="active">
+              Favorites
+            </a>
+          </li>
 
-<ul>
+          <li>
+            <a href="pharmacies.html">
+              Pharmacies
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-<li><a href="index.html">Home</a></li>
+    </div>
 
-<li><a href="favorites.html">Favorites</a></li>
+  </header>
 
 
-</ul>
+  <!-- MAIN CONTENT -->
+  <main class="favorites-main">
 
-</nav>
+    <section class="favorites-section">
 
-</header>
+      <div class="favorites-header">
 
-<main>
+        <div class="favorites-title-group">
 
-<h1>Favorite Medicines</h1>
+          <h2>
+            Favorite Medicines
+          </h2>
 
-<div id="favoritesList"></div>
+          <span
+            id="favoritesCount"
+            class="favorites-count"
+          >
+            0
+          </span>
 
-</main>
+        </div>
 
-<script type="module" src="js/favorites.js"></script>
+        <button
+          id="clearFavorites"
+          class="clear-btn"
+          type="button"
+        >
+          Clear All
+        </button>
+
+      </div>
+
+
+      <div id="favoritesList">
+
+        <div class="empty">
+
+          <h2>
+            No Favorite Medicines
+          </h2>
+
+          <p>
+            You haven't saved any favorite medicines yet.
+          </p>
+
+          <a
+            href="index.html"
+            class="home-btn"
+          >
+            ← Go back to search medicines
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      WDD 330 Class Project
+    </p>
+
+    <p>
+      Preston Machanga
+    </p>
+
+    <p>
+      &copy;
+      <span id="year"></span>
+      Pharmacy Medicine Finder
+    </p>
+
+    <p>
+      Last Modified:
+      <span id="lastModified"></span>
+    </p>
+
+  </footer>
+
+
+  <script type="module" src="/src/favorites.js"></script>
 
 </body>
+
 </html>

@@ -1,24 +1,46 @@
+/* =========================
+   Global
+========================= */
+
 * {
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
   font-family: Arial, sans-serif;
+
   background: #f3f4f6;
   color: #111827;
+
   line-height: 1.6;
 }
 
-/* Header */
+
+/* =========================
+   Header
+========================= */
 
 header {
-  background: #2563eb;
+  background: #0f4ee3;
   color: white;
+
   padding: 16px 24px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   flex-wrap: wrap;
 }
 
@@ -27,76 +49,123 @@ header {
   font-weight: bold;
 }
 
+
+/* =========================
+   Navigation
+========================= */
+
 nav ul {
   list-style: none;
+
   display: flex;
+
   gap: 16px;
+
   margin: 0;
   padding: 0;
 }
 
-nav a {
+nav ul li a {
   color: white;
+
   text-decoration: none;
+
   font-weight: 500;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  transition: background 0.2s ease;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav ul li a:hover,
+nav ul li a.active {
+  background: #1d4ed8;
 }
 
-/* Hero */
+
+/* =========================
+   Hero
+========================= */
 
 .hero {
   text-align: center;
+
   padding: 60px 20px 40px;
 }
 
 .hero h1 {
   font-size: 2.2rem;
+
   margin-bottom: 12px;
+
   color: #111827;
 }
 
 .hero p {
   max-width: 650px;
+
   margin: 0 auto;
+
   color: #4b5563;
 }
 
-/* Search */
+
+/* =========================
+   Search
+========================= */
 
 .search-section {
   max-width: 760px;
+
   margin: 0 auto 36px;
+
   padding: 0 20px;
+
   display: flex;
+
   gap: 12px;
 }
 
 .search-section input {
   flex: 1;
+
   padding: 14px 16px;
+
   font-size: 16px;
+
   border: 1px solid #d1d5db;
+
   border-radius: 12px;
+
   outline: none;
+
   background: white;
 }
 
 .search-section input:focus {
   border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .search-section button {
   padding: 14px 20px;
+
   border: none;
+
   border-radius: 12px;
+
   background: #2563eb;
+
   color: white;
+
   font-weight: 600;
+
   cursor: pointer;
+
   transition: background 0.2s ease;
 }
 
@@ -104,13 +173,18 @@ nav a:hover {
   background: #1d4ed8;
 }
 
-/* Sections */
+
+/* =========================
+   Sections
+========================= */
 
 .categories,
 .recent-searches,
 .results-section {
   max-width: 1100px;
+
   margin: 0 auto 36px;
+
   padding: 0 20px;
 }
 
@@ -118,51 +192,84 @@ nav a:hover {
 .recent-searches h2,
 .results-section h2 {
   margin-bottom: 18px;
+
   color: #111827;
 }
 
-/* Category grid */
+
+/* =========================
+   Category Grid
+========================= */
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(150px, 1fr));
+
   gap: 16px;
 }
 
 .card {
   background: white;
+
   padding: 20px;
+
   border-radius: 16px;
+
   text-align: center;
+
   font-weight: 600;
+
   cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* History */
+
+/* =========================
+   Search History
+========================= */
 
 #historyList {
   list-style: none;
+
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 10px;
+
   margin: 0;
+
   padding: 0;
 }
 
 #historyList li {
   background: #dbeafe;
+
   color: #1d4ed8;
+
   padding: 8px 14px;
+
   border-radius: 999px;
+
   cursor: pointer;
+
   font-weight: 500;
+
   transition: background 0.2s ease;
 }
 
@@ -170,54 +277,85 @@ nav a:hover {
   background: #bfdbfe;
 }
 
-/* Medicine results */
+
+/* =========================
+   Medicine Results
+========================= */
 
 .medicine-card {
   background: white;
+
   padding: 20px;
+
   border-radius: 18px;
+
   margin-bottom: 18px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .medicine-header {
   display: flex;
+
   justify-content: space-between;
+
   align-items: flex-start;
+
   gap: 16px;
+
   margin-bottom: 14px;
 }
 
 .medicine-card h3 {
   margin: 0 0 6px;
+
   color: #111827;
 }
 
 .medicine-card p {
   margin: 8px 0;
+
   color: #374151;
 }
 
-/* Favorite button */
+
+/* =========================
+   Favorite Button
+========================= */
 
 .favorite-btn {
   border: none;
-  background: #f59e0b;
+
+  background: #e89911;
+
   color: white;
+
   width: 42px;
+
   height: 42px;
+
   border-radius: 12px;
+
   cursor: pointer;
+
   font-size: 18px;
-  transition: transform 0.15s ease, background 0.2s ease;
+
+  transition:
+    transform 0.15s ease,
+    background 0.2s ease;
 }
 
 .favorite-btn:hover {
   background: #d97706;
+
   transform: scale(1.05);
 }
 
-/* Details */
+
+/* =========================
+   Details
+========================= */
 
 details {
   margin-top: 12px;
@@ -225,7 +363,9 @@ details {
 
 summary {
   cursor: pointer;
+
   font-weight: 600;
+
   color: #2563eb;
 }
 
@@ -233,62 +373,401 @@ summary:hover {
   text-decoration: underline;
 }
 
-/* Empty state */
+
+/* =========================
+   Empty State
+========================= */
 
 .empty {
+  grid-column: 1 / -1;
+
   text-align: center;
+
   color: #6b7280;
-  padding: 28px;
+
+  padding: 40px 20px;
+
   background: white;
+
   border-radius: 16px;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-/* Footer */
+.empty h2 {
+  margin-top: 0;
+
+  color: #111827;
+}
+
+.empty p {
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   Map & Pharmacy
+========================= */
+
+#map {
+  width: 100%;
+
+  height: 400px;
+
+  border-radius: 12px;
+
+  background-color: #e5e7eb;
+
+  margin-bottom: 2rem;
+
+  overflow: hidden;
+}
+
+#pharmacyList {
+  display: grid;
+
+  gap: 1.5rem;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.pharmacy-card {
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   FAVORITES PAGE
+========================= */
+
+.favorites-main {
+  flex: 1;
+
+  width: 100%;
+
+  background: #f3f4f6;
+}
+
+.favorites-section {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 40px 20px 60px;
+}
+
+
+/* =========================
+   Favorites Header
+========================= */
+
+.favorites-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-bottom: 24px;
+}
+
+.favorites-title-group {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.favorites-title-group h1,
+.favorites-title-group h2 {
+  margin: 0;
+
+  font-size: 1.8rem;
+
+  color: #111827;
+}
+
+.favorites-count {
+  background: #dbeafe;
+
+  color: #1d4ed8;
+
+  font-size: 0.85rem;
+
+  padding: 4px 12px;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   Clear Favorites Button
+========================= */
+
+.clear-btn {
+  background: #ef4444;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.clear-btn:hover {
+  background: #dc2626;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   Favorites List
+========================= */
+
+#favoritesList {
+  display: grid;
+
+  gap: 20px;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(300px, 1fr));
+}
+
+
+/* =========================
+   Favorite Medicine Card
+========================= */
+
+.favorite-card {
+  background: white;
+
+  padding: 22px;
+
+  border-radius: 16px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.favorite-card h3 {
+  margin: 0 0 12px;
+
+  color: #2563eb;
+
+  font-size: 1.3rem;
+}
+
+.favorite-card p {
+  margin: 8px 0;
+
+  color: #374151;
+}
+
+.favorite-card strong {
+  color: #111827;
+}
+
+
+/* =========================
+   Favorite Medicine Header
+========================= */
+
+.favorite-card .medicine-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+
+/* =========================
+   Saved Date
+========================= */
+
+.saved-date {
+  color: #64748b !important;
+
+  font-size: 0.85rem;
+}
+
+
+/* =========================
+   Remove Favorite
+========================= */
+
+.remove-favorite-btn {
+  flex-shrink: 0;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  border: 1px solid #fca5a5;
+
+  padding: 9px 15px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.remove-favorite-btn:hover {
+  background: #dc2626;
+
+  color: white;
+}
+
+
+/* =========================
+   Find Medicines Button
+========================= */
+
+.home-btn {
+  display: inline-block;
+
+  background: #2563eb;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: background 0.2s ease;
+}
+
+.home-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================
+   Footer
+========================= */
 
 footer {
   background: #111827;
+
   color: white;
+
   text-align: center;
-  padding: 24px;
-  margin-top: 48px;
+
+  padding: 30px 20px;
+
+  margin-top: auto;
 }
 
 footer p {
-  margin: 0;
+  margin: 8px 0;
+
+  font-size: 18px;
 }
 
-/* Animation */
+
+/* =========================
+   Animation
+========================= */
 
 .fade-in {
   animation: fadeIn 0.35s ease;
 }
 
 @keyframes fadeIn {
+
   from {
     opacity: 0;
+
     transform: translateY(6px);
   }
+
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
 
-/* Responsive */
+
+/* =========================
+   Responsive Design
+========================= */
 
 @media (max-width: 768px) {
+
   header {
     flex-direction: column;
-    gap: 12px;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px 20px;
   }
 
   nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    gap: 12px;
 
-  .hero {
-    padding-top: 44px;
+    flex-wrap: wrap;
+
+    justify-content: center;
   }
 
   .hero h1 {
@@ -310,15 +789,80 @@ footer p {
   .favorite-btn {
     align-self: flex-end;
   }
+
+  .favorites-section {
+    padding: 30px 15px 50px;
+  }
+
+  .favorites-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  #favoritesList {
+    grid-template-columns: 1fr;
+  }
+
+  .favorite-card .medicine-header {
+    flex-direction: column;
+  }
+
+  .remove-favorite-btn {
+    width: 100%;
+  }
+
+  #map {
+    height: 400px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
 }
 
+
 @media (max-width: 480px) {
+
+  .hero {
+    padding-top: 40px;
+  }
+
   .hero h1 {
     font-size: 1.6rem;
   }
 
   .card,
-  .medicine-card {
+  .medicine-card,
+  .favorite-card {
     padding: 16px;
   }
+
+  nav ul {
+    gap: 6px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+
+    padding: 7px 9px;
+  }
+
+  .favorites-title-group h1,
+  .favorites-title-group h2 {
+    font-size: 1.5rem;
+  }
+
+  #map {
+    height: 350px;
+  }
+
+  footer {
+    padding: 25px 15px;
+  }
+
+  footer p {
+    font-size: 15px;
+  }
 }
+
